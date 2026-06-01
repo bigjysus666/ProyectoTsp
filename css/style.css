@@ -1,1 +1,22 @@
-/* estilos */ 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+#productos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#productos div {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 200px;
+    border-radius: 10px;
+}
