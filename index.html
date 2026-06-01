@@ -3,23 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Virtual</title>
+    <title>Tech Z</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <h1>Tienda Virtual</h1>
+
+        <div class="logo">
+            Tech Z
+        </div>
+
+        <div class="acciones">
+
+            <input
+                type="text"
+                id="busqueda"
+                placeholder="Buscar producto..."
+            >
+
+            <select id="filtro">
+                <option value="todos">Todos</option>
+                <option value="celulares">Celulares</option>
+                <option value="laptops">Laptops</option>
+            </select>
+
+            <button id="login">
+                Login
+            </button>
+
+        </div>
+
     </header>
 
     <main>
-        <h2>Productos</h2>
 
-        <div id="productos">
-            <!-- Aquí aparecerán los productos -->
-        </div>
+        <div id="productos"></div>
+
     </main>
 
     <script src="js/app.js"></script>
+
 </body>
 </html>
