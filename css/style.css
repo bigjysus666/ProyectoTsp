@@ -1,22 +1,167 @@
-body {
-    font-family: Arial, sans-serif;
+
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
+body {
+    background-color: #f9f9f9;
+    color: #333333;
+}
 header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    padding: 15px 40px;
+    background-color: #696969;
+    border-bottom: 1px solid #000000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+#busqueda, #filtro {
+    padding: 8px 16px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+#busqueda {
+    width: 250px;
+}
+#login {
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 1px solid #333333;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#login:hover {
+    background-color: #333333;
+    color: #000000;
+}
+main {
+    width: 90%;            
+    max-width: 1600px;     
+    margin: 40px auto;
+    padding: 0 10px;
 }
 
 #productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 30px;
+}
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-bottom: 1px solid #e0e0e0;
 }
 
-#productos div {
-    border: 1px solid #ccc;
-    padding: 15px;
-    width: 200px;
-    border-radius: 10px;
+.info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1; 
+}
+
+.info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111111;
+}
+
+.precio {
+    font-size: 15px;
+    color: #000000;
+}
+
+.stock {
+    font-size: 13px;
+    color: #000000;
+}
+.btn-carrito {
+    align-self: flex-end; 
+    margin-top: auto;     
+    padding: 8px 14px;
+    background-color: #f5f5f5;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-carrito:hover {
+    background-color: #b33a3a;
+}
+@media (max-width: 900px) {
+    #productos { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    #productos { grid-template-columns: 1fr; }
+    header { flex-direction: column; gap: 15px; }
+}
+@media (max-width: 900px) {
+    header {
+        padding: 15px 20px; /* Reducimos espacio a los lados */
+    }
+    #busqueda {
+        width: 180px; /* Encogemos un poco el buscador */
+    }
+}
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .acciones {
+        width: 100%;
+        flex-wrap: wrap;       
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #busqueda {
+        width: 100%;           
+        max-width: 300px;
+    }
+
+    main {
+        width: 95%;            
+        margin: 20px auto;
+    }
 }
