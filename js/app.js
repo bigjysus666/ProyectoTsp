@@ -48,6 +48,37 @@ const productos = [
     imagen:"https://picsum.photos/400/300?6"
 }
 
+{
+    nombre:"Motorola Moto G Play",
+    categoria:"celulares",
+    precio:290000,
+    stock:20,
+    imagen:"https://m.media-amazon.com/images/I/61xk4XNRktL._AC_UY327_FMwebp_QL65_.jpg"
+},
+
+{
+    nombre:"iPhone 13",
+    categoria:"celulares",
+    precio:880000,
+    stock:10,
+    imagen:"https://images-na.ssl-images-amazon.com/images/I/518rwCXZ0SL._AC_UL165_SR165,165_.jpg"
+},
+
+{
+    nombre:"Galaxy Chromebook",
+    categoria:"laptops",
+    precio:680000,
+    stock:14,
+    imagen:"https://m.media-amazon.com/images/I/51Lko54--JL._AC_UY327_FMwebp_QL65_.jpg"
+},
+
+{
+    nombre:"T-Mobile Revvl 7",
+    categoria:"celulares",
+    precio:440000,
+    stock:22,
+    imagen:"https://m.media-amazon.com/images/I/51Aux7GAksL._AC_UY327_FMwebp_QL65_.jpg"
+}
 ];
 
 const contenedor = document.getElementById("productos");
